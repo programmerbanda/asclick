@@ -75,21 +75,21 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
 
           <Link
-            href="#work"
+            href="/work"
             className="relative text-muted-foreground hover:text-foreground transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:bg-foreground after:transition-all hover:after:w-full"
           >
             Work
           </Link>
 
           <Link
-            href="#about"
+            href="/about"
             className="relative text-muted-foreground hover:text-foreground transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:bg-foreground after:transition-all hover:after:w-full"
           >
             About
           </Link>
 
           <Link
-            href="#contact"
+            href="/contact"
             className="relative text-muted-foreground hover:text-foreground transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:bg-foreground after:transition-all hover:after:w-full"
           >
             Contact
