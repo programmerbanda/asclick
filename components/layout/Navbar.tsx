@@ -50,47 +50,42 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className={`
         fixed top-0 left-0 right-0 z-50
-        backdrop-blur-xl
-        border-b border-border
         transition-all duration-300
-        bg-background/70
-        supports-[backdrop-filter]:bg-background/60
-        ${scrolled ? "shadow-md" : ""}
+        border-b border-border
+        bg-background/80 backdrop-blur-2xl
+        ${scrolled ? "shadow-lg shadow-black/5 dark:shadow-black/30" : ""}
       `}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
 
         {/* Logo */}
         <Link
           href="/"
-          className="
-            text-lg font-semibold tracking-widest
-            text-foreground
-            hover:opacity-80 transition
-          "
+          className="text-lg font-bold tracking-[0.25em] text-foreground hover:opacity-80 transition"
         >
-          ASCLICK
+          AS CLICK
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+
           <Link
             href="#work"
-            className="text-muted-foreground hover:text-foreground transition"
+            className="relative text-muted-foreground hover:text-foreground transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:bg-foreground after:transition-all hover:after:w-full"
           >
             Work
           </Link>
 
           <Link
             href="#about"
-            className="text-muted-foreground hover:text-foreground transition"
+            className="relative text-muted-foreground hover:text-foreground transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:bg-foreground after:transition-all hover:after:w-full"
           >
             About
           </Link>
 
           <Link
             href="#contact"
-            className="text-muted-foreground hover:text-foreground transition"
+            className="relative text-muted-foreground hover:text-foreground transition after:absolute after:left-0 after:-bottom-1 after:w-0 after:bg-foreground after:transition-all hover:after:w-full"
           >
             Contact
           </Link>
@@ -98,6 +93,7 @@ export default function Navbar() {
           <Button
             variant="ghost"
             size="icon"
+            className="text-foreground hover:bg-muted cursor-pointer"
             onClick={() =>
               setTheme(theme === "dark" ? "light" : "dark")
             }
@@ -112,6 +108,7 @@ export default function Navbar() {
           <Button
             variant="ghost"
             size="icon"
+            className="text-foreground hover:bg-muted cursor-pointer"
             onClick={() =>
               setTheme(theme === "dark" ? "light" : "dark")
             }
@@ -121,20 +118,21 @@ export default function Navbar() {
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-foreground hover:bg-muted cursor-pointer"
+              >
                 <Menu size={20} />
               </Button>
             </SheetTrigger>
 
             <SheetContent
               side="right"
-              className="
-                w-[260px]
-                bg-background
-                border-l border-border
-              "
+              className="w-[260px] bg-background border-l border-border"
             >
-              <div className="flex flex-col gap-6 mt-12 text-base font-medium">
+              <div className="flex flex-col pl-8 gap-6 mt-12 text-base font-medium">
+
                 <Link
                   onClick={() => setOpen(false)}
                   className="text-muted-foreground hover:text-foreground transition"
@@ -158,6 +156,7 @@ export default function Navbar() {
                 >
                   Contact
                 </Link>
+
               </div>
             </SheetContent>
           </Sheet>
