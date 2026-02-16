@@ -6,8 +6,9 @@ import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 
 export const metadata: Metadata = {
-  title: "Amit Studio | Photographer Portfolio",
-  description: "Wedding, Portrait and Cinematic Photography Portfolio",
+  title: "AS Click | Wedding, Portrait & Cinematic Photography",
+  description:
+    "AS Click is a professional photography portfolio specializing in weddings, portraits, and cinematic storytelling. Book your unforgettable moments today.",
 }
 
 export default function RootLayout({
