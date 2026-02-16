@@ -141,7 +141,7 @@ export default function Navbar() {
                 <Link
                   onClick={() => setOpen(false)}
                   className="text-muted-foreground hover:text-foreground transition"
-                  href="#work"
+                  href="/work"
                 >
                   Work
                 </Link>
@@ -149,7 +149,7 @@ export default function Navbar() {
                 <Link
                   onClick={() => setOpen(false)}
                   className="text-muted-foreground hover:text-foreground transition"
-                  href="#about"
+                  href="/about"
                 >
                   About
                 </Link>
@@ -157,7 +157,7 @@ export default function Navbar() {
                 <Link
                   onClick={() => setOpen(false)}
                   className="text-muted-foreground hover:text-foreground transition"
-                  href="#contact"
+                  href="/contact"
                 >
                   Contact
                 </Link>
