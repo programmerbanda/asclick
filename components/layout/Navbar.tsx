@@ -63,7 +63,12 @@ export default function Navbar() {
           href="/"
           className="text-lg font-bold tracking-[0.25em] text-foreground hover:opacity-80 transition"
         >
-          AS CLICK
+          <h2 className="text-2xl font-bold tracking-tight">
+              AS
+              <span className="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
+                CLICK
+              </span>
+            </h2>
         </Link>
 
         {/* Desktop Menu */}
