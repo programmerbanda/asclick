@@ -42,10 +42,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-tight text-gray-900 dark:text-white"
+          className="text-4xl md:text-6xl lg:text-6xl font-semibold tracking-tight leading-tight text-gray-900 dark:text-white"
         >
           Capturing Stories Through
-          <span className="block bg-gradient-to-r from-gray-900 to-gray-600 dark:from-primary dark:to-pink-500 bg-clip-text text-transparent">
+          <span className="block bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
             Minimal & Cinematic Photography
           </span>
         </motion.h1>
@@ -94,7 +94,7 @@ export default function Hero() {
           <Link href="/work">
             <Button
               size="lg"
-              className="px-8 rounded-xl text-base group shadow-md hover:shadow-xl transition-all hover:-translate-y-1"
+              className="px-8 rounded-md cursor-pointer text-sm group shadow-md hover:shadow-xl transition-all hover:-translate-y-1"
             >
               View Work
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -104,8 +104,8 @@ export default function Hero() {
           <Link href="/contact">
             <Button
               size="lg"
-              variant="outline"
-              className="px-8 rounded-xl text-base border-gray-300 hover:bg-gray-100 dark:hover:bg-muted transition-all hover:-translate-y-1"
+              // variant="outline"
+              className="px-8 rounded-md cursor-pointer text-sm border-gray-300 transition-all hover:-translate-y-1"
             >
               Contact
             </Button>
