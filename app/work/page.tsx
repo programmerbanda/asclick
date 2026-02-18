@@ -1,23 +1,27 @@
 import WorkClient from "./WorkClient";
 
 export const metadata = {
-  title: "Wedding Photography Portfolio | ASCLICK - Motihari",
+  title: "Our Work | Wedding Photography Portfolio in Motihari - ASCLICK",
   description:
-    "Explore the wedding photography portfolio of ASCLICK. Cinematic wedding, pre-wedding, reception and bridal photography in Motihari and across India.",
+    "Browse the official wedding photography portfolio of ASCLICK. Explore cinematic weddings, pre-wedding shoots, bridal portraits and reception photography captured in Motihari and across India.",
   keywords: [
-    "Wedding photography portfolio",
-    "Wedding photographer in Motihari",
-    "Pre wedding shoot",
-    "Cinematic wedding photography",
-    "Bridal photography India",
+    "ASCLICK portfolio",
+    "Wedding photography portfolio in Motihari",
+    "Professional wedding photographer Motihari",
+    "Pre wedding shoot Motihari",
+    "Cinematic wedding photography India",
+    "Wedding gallery ASCLICK",
   ],
   openGraph: {
-    title: "ASCLICK Wedding Photography Portfolio",
+    title: "ASCLICK | Wedding Photography Portfolio",
     description:
-      "Discover cinematic wedding stories captured by ASCLICK across India.",
+      "Explore cinematic wedding stories and professional photography work by ASCLICK in Motihari and across India.",
     url: "https://yourwebsite.com/work",
     siteName: "ASCLICK",
     type: "website",
+  },
+  alternates: {
+    canonical: "https://yourwebsite.com/work",
   },
 };
 
