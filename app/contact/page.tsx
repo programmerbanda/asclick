@@ -63,7 +63,7 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="space-y-10"
           >
-            <h2 className="text-3xl font-semibold tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
               Contact Information
             </h2>
 
@@ -71,7 +71,7 @@ export default function ContactPage() {
 
               <div className="flex items-start gap-4 group">
                 <Mail className="w-6 h-6 text-primary mt-1 group-hover:scale-110 transition" />
-                <div>
+                <div className="text-sm md:text-base">
                   <p className="font-medium text-gray-900 dark:text-foreground">
                     Email
                   </p>
@@ -81,7 +81,7 @@ export default function ContactPage() {
 
               <div className="flex items-start gap-4 group">
                 <Phone className="w-6 h-6 text-primary mt-1 group-hover:scale-110 transition" />
-                <div>
+                <div className="text-sm md:text-base">
                   <p className="font-medium text-gray-900 dark:text-foreground">
                     Phone
                   </p>
@@ -91,7 +91,7 @@ export default function ContactPage() {
 
               <div className="flex items-start gap-4 group">
                 <MapPin className="w-6 h-6 text-primary mt-1 group-hover:scale-110 transition" />
-                <div>
+                <div className="text-sm md:text-base">
                   <p className="font-medium text-gray-900 dark:text-foreground">
                     Location
                   </p>
@@ -129,7 +129,7 @@ export default function ContactPage() {
                       type="text"
                       placeholder="Your name"
                       required
-                      className="w-full mt-2 px-4 py-3 rounded-lg border border-gray-300 dark:border-border bg-white dark:bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:shadow-lg transition"
+                      className="w-full mt-2 px-4 py-3 rounded-lg border border-gray-300 dark:border-border bg-white text-sm dark:bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:shadow-lg transition"
                     />
                   </div>
 
@@ -141,7 +141,7 @@ export default function ContactPage() {
                       type="email"
                       placeholder="you@example.com"
                       required
-                      className="w-full mt-2 px-4 py-3 rounded-lg border border-gray-300 dark:border-border bg-white dark:bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:shadow-lg transition"
+                      className="w-full mt-2 px-4 py-3 rounded-lg border border-gray-300 dark:border-border bg-white text-sm dark:bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:shadow-lg transition"
                     />
                   </div>
 
@@ -153,7 +153,7 @@ export default function ContactPage() {
                       rows={5}
                       placeholder="Tell us about your event..."
                       required
-                      className="w-full mt-2 px-4 py-3 rounded-lg border border-gray-300 dark:border-border bg-white dark:bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:shadow-lg transition resize-none"
+                      className="w-full mt-2 px-4 py-3 rounded-lg border border-gray-300 dark:border-border bg-white text-sm dark:bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:shadow-lg transition resize-none"
                     />
                   </div>
 
