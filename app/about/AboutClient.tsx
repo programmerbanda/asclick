@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { Camera, Sparkles, Award } from "lucide-react";
+import { Camera, Sparkles } from "lucide-react";
 
 function Counter({ target }: { target: number }) {
   const ref = useRef(null);
