@@ -28,7 +28,7 @@ export default function Testimonials() {
           {testimonials.map((item, index) => (
             <ScrollReveal key={index} delay={index * 0.2}>
               <div className="bg-muted border border-border rounded-2xl p-8 shadow-sm text-left hover:-translate-y-2 transition">
-                <p className=" text-black dark:text-white leading-relaxed">
+                <p className="text-sm text-black dark:text-white leading-relaxed">
                   {item.text}
                 </p>
                 <p className="mt-6 text-sm text-black dark:text-white font-medium">
