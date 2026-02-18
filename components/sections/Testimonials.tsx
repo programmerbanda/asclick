@@ -19,7 +19,7 @@ export default function Testimonials() {
       <div className="max-w-5xl mx-auto px-6 text-center space-y-16">
 
         <ScrollReveal>
-          <h2 className="text-3xl font-semibold">
+          <h2 className="text-3xl text-black dark:text-white md:text-5xl font-semibold">
             What Clients Say
           </h2>
         </ScrollReveal>
@@ -28,10 +28,10 @@ export default function Testimonials() {
           {testimonials.map((item, index) => (
             <ScrollReveal key={index} delay={index * 0.2}>
               <div className="bg-muted border border-border rounded-2xl p-8 shadow-sm text-left hover:-translate-y-2 transition">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className=" text-black dark:text-white leading-relaxed">
                   {item.text}
                 </p>
-                <p className="mt-6 font-medium">
+                <p className="mt-6 text-sm text-black dark:text-white font-medium">
                   — {item.name}
                 </p>
               </div>

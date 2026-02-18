@@ -69,7 +69,7 @@ export default function AboutPage() {
             className="relative w-full h-[450px] rounded-3xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="/about.jpg"
+              src="/main.jpg"
               alt="Amit Singh - Wedding Photographer"
               fill
               className="object-cover"
@@ -85,16 +85,33 @@ export default function AboutPage() {
               Meet Amit Singh
             </h2>
 
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-              Founder of ASCLICK, Amit Singh has spent over 8 years mastering
-              the art of wedding storytelling. His approach blends cinematic
-              framing, natural light mastery, and emotional authenticity.
-            </p>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+  Founder of ASCLICK, Amit Singh is a passionate wedding photographer
+  with over 8 years of experience in crafting timeless love stories.
+  What began as a creative curiosity soon evolved into a lifelong
+  commitment to documenting emotions in their purest form. Amit
+  believes that wedding photography is not just about taking pictures —
+  it is about preserving moments that families will cherish for
+  generations.
+</p>
 
-            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              From intimate ceremonies to grand destination weddings,
-              Amit ensures every frame preserves emotion with elegance.
-            </p>
+<p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+  His signature style blends cinematic composition, natural light
+  mastery, and refined storytelling. Every frame is thoughtfully
+  composed to capture authentic expressions, subtle details, and the
+  atmosphere that makes each celebration unique. From quiet, intimate
+  ceremonies to grand destination weddings, Amit approaches every
+  project with the same dedication, precision, and artistic vision.
+</p>
+
+<p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+  Over the years, he has worked with hundreds of couples across diverse
+  locations, building a reputation for professionalism, creativity, and
+  reliability. For Amit, photography is more than a profession — it is
+  a responsibility to transform fleeting moments into timeless visual
+  memories that tell a story long after the wedding day has passed.
+</p>
+
           </motion.div>
 
         </div>

@@ -75,7 +75,7 @@ export default function Stats() {
             >
               <Icon className="w-8 h-8 mx-auto mb-6 text-primary" />
 
-              <h3 className="text-5xl font-bold bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
+              <h3 className="text-4xl font-bold bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
                 <Counter value={stat.number} />
                 {stat.suffix}
               </h3>

@@ -33,10 +33,10 @@ export default function Featured() {
 
         <ScrollReveal>
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
+            <h2 className="text-3xl text-black dark:text-white md:text-5xl font-semibold tracking-tight">
               Featured Work
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-4 text-lg">
+            <p className="text-gray-600 dark:text-gray-400 mt-4 text-sm">
               A curated selection of cinematic stories and luxury visual experiences.
             </p>
           </div>

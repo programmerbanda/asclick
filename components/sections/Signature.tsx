@@ -32,37 +32,52 @@ const features = [
 
 export default function SignatureStyle() {
   return (
-    <section className="py-32 bg-gradient-to-b from-white to-gray-50 dark:from-[#0f0f12] dark:to-[#15151a]">
+    <section className="py-24 md:py-32 bg-gradient-to-b 
+      from-white to-gray-50 
+      dark:from-[#0f0f12] dark:to-[#15151a] 
+      overflow-x-hidden">
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
+        {/* Heading */}
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-gray-900 dark:text-white">
             The ASCLICK Signature Style
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mt-4 text-lg">
+          <p className="text-gray-600 dark:text-gray-400 mt-4 text-sm">
             A blend of artistry, emotion and cinematic precision.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        {/* Cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {features.map((item, index) => {
             const Icon = item.icon
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.15 }}
-                whileHover={{ y: -6 }}
-                className="bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-3xl p-8 shadow-xl text-center transition"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative bg-white dark:bg-[#1a1a1f] 
+                  border border-gray-200 dark:border-white/10
+                  rounded-3xl p-8 text-center
+                  transition-transform duration-300
+                  hover:-translate-y-2
+                  will-change-transform"
               >
-                <Icon className="w-10 h-10 mx-auto mb-6 text-primary" />
+                {/* Icon */}
+                <div className="flex justify-center mb-6">
+                  <Icon className="w-10 h-10 text-primary transition-transform duration-300 group-hover:scale-110" />
+                </div>
 
-                <h3 className="text-lg font-semibold mb-4">
+                {/* Title */}
+                <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
                   {item.title}
                 </h3>
 
+                {/* Description */}
                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                   {item.description}
                 </p>
