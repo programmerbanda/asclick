@@ -37,10 +37,10 @@ function Counter({ target }: { target: number }) {
 
 export default function AboutPage() {
   return (
-    <div className="bg-white dark:bg-[#0f0f12] text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div className="overflow-x-hidden bg-white dark:bg-[#0f0f12] text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
       {/* HERO */}
-      <section className="py-24 md:py-32 px-6 text-center">
+      <section className="pt-24 pb-8 px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ export default function AboutPage() {
           </span>
         </motion.h1>
 
-        <p className="mt-6 max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-lg">
+        <p className="mt-4 max-w-2xl mx-auto text-gray-600 dark:text-gray-400 text-sm">
           A cinematic journey of emotions, artistry, and timeless wedding storytelling.
         </p>
       </section>

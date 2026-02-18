@@ -72,7 +72,7 @@ export default function WorkPage() {
             Captured
           </span>
         </h1>
-        <p className="mt-6 max-w-2xl text-sm mx-auto text-gray-600 dark:text-gray-400">
+        <p className="mt-4 max-w-2xl text-sm mx-auto text-gray-600 dark:text-gray-400">
           A curated collection of timeless wedding memories crafted with
           cinematic precision.
         </p>

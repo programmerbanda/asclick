@@ -25,7 +25,7 @@ export default function ContactPage() {
       <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl opacity-30"></div>
 
       {/* HERO */}
-      <section className="relative py-24 md:py-32 px-6 text-center">
+      <section className="relative pt-24 pb-8 px-6 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function ContactPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
           viewport={{ once: true }}
-          className="mt-6 text-lg text-gray-600 dark:text-muted-foreground max-w-2xl mx-auto"
+          className="mt-4 text-sm text-gray-600 dark:text-muted-foreground max-w-2xl mx-auto"
         >
           Let’s capture your story beautifully. Reach out and let’s create
           something timeless together.
@@ -95,7 +95,7 @@ export default function ContactPage() {
                   <p className="font-medium text-gray-900 dark:text-foreground">
                     Location
                   </p>
-                  <p>Delhi, India</p>
+                  <p>Motihari, India</p>
                 </div>
               </div>
 
@@ -160,7 +160,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-pink-500 text-white py-3 rounded-xl hover:opacity-90 hover:scale-[1.02] transition-all duration-300"
+                    className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-pink-500 text-white py-3 rounded-xl hover:opacity-90 hover:scale-[1.02] transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? "Sending..." : "Send Message"}
                     <Send className="w-4 h-4" />
