@@ -36,6 +36,20 @@ const socialLinks = [
   { icon: Mail, href: "mailto:hello@asclick.com", label: "Email" },
 ]
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+}
+
 export default function Footer() {
   const pathname = usePathname()
 
@@ -55,19 +69,29 @@ export default function Footer() {
     <motion.footer
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
+      // animate={{ opacity: 1, y: 0 }}
+      viewport={{once: false, amount: 0.2}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true }}
       className="relative border-t border-gray-200 bg-white dark:border-border dark:bg-background/70 dark:backdrop-blur-xl overflow-hidden"
     >
       <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-primary/5 via-transparent to-pink-500/5 blur-3xl opacity-60" />
 
       <div className="max-w-7xl mx-auto px-6 py-20">
 
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: false, amount: 0.2 }}
+          className="grid gap-12 md:grid-cols-2 lg:grid-cols-4"
+        >
 
           {/* BRAND */}
-          <div className="space-y-6">
-
+          <motion.div
+            variants={itemVariants}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
             <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-foreground">
               AS
               <span className="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
@@ -95,7 +119,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Social */}
             <div className="flex items-center gap-4 pt-4">
               {socialLinks.map((social, i) => (
                 <motion.a
@@ -105,20 +128,25 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{once: false, amount: 0.2 }}
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ scale: 1.15 }}
+                  whileTap={{ scale: 0.95 }}
                   className="p-2 rounded-lg text-gray-500 hover:text-black hover:bg-gray-100 dark:text-muted-foreground dark:hover:text-foreground dark:hover:bg-muted transition-all"
                 >
                   <social.icon className="w-5 h-5" />
                 </motion.a>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* NAVIGATION */}
-          <div className="space-y-6">
-            <h4 className="text-sm text-black dark:text-white font-semibold uppercase tracking-wider">
+          <motion.div
+            variants={itemVariants}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-black dark:text-white">
               Navigation
             </h4>
 
@@ -129,11 +157,15 @@ export default function Footer() {
                 </Link>
               ))}
             </nav>
-          </div>
+          </motion.div>
 
           {/* IMPORTANT LINKS */}
-          <div className="space-y-6">
-            <h4 className="text-sm text-black dark:text-white font-semibold uppercase tracking-wider">
+          <motion.div
+            variants={itemVariants}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-black dark:text-white">
               Important Links
             </h4>
 
@@ -144,11 +176,15 @@ export default function Footer() {
                 </Link>
               ))}
             </nav>
-          </div>
+          </motion.div>
 
           {/* NEWSLETTER */}
-          <div className="space-y-6">
-            <h4 className="text-sm font-semibold uppercase tracking-wider">
+          <motion.div
+            variants={itemVariants}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-black dark:text-white">
               Stay Updated
             </h4>
 
@@ -173,14 +209,15 @@ export default function Footer() {
                 <ArrowRight className="w-4 h-4" />
               </button>
             </form>
-          </div>
-        </div>
+          </motion.div>
 
-        {/* Divider */}
+        </motion.div>
+
+        {/* Animated Divider */}
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
+          viewport={{once: false, amount: 0.2 }}
           transition={{ duration: 0.8 }}
           className="origin-left mt-16 h-[1px] bg-gradient-to-r from-primary to-pink-500"
         />
