@@ -44,6 +44,13 @@ export default function Footer() {
     alert("Thank you for subscribing!")
   }
 
+  const linkClasses = (href: string) =>
+    `transition hover:text-black dark:hover:text-foreground ${
+      pathname === href
+        ? "text-black dark:text-foreground font-medium"
+        : "text-gray-600 dark:text-muted-foreground"
+    }`
+
   return (
     <motion.footer
       initial={{ opacity: 0, y: 80 }}
@@ -56,10 +63,10 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 py-20">
 
-        <div className="grid gap-16 md:grid-cols-12">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 
           {/* BRAND */}
-          <div className="space-y-6 md:col-span-4 max-w-sm">
+          <div className="space-y-6">
 
             <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-foreground">
               AS
@@ -88,6 +95,7 @@ export default function Footer() {
               </div>
             </div>
 
+            {/* Social */}
             <div className="flex items-center gap-4 pt-4">
               {socialLinks.map((social, i) => (
                 <motion.a
@@ -97,6 +105,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ scale: 1.15 }}
                   className="p-2 rounded-lg text-gray-500 hover:text-black hover:bg-gray-100 dark:text-muted-foreground dark:hover:text-foreground dark:hover:bg-muted transition-all"
@@ -108,41 +117,29 @@ export default function Footer() {
           </div>
 
           {/* NAVIGATION */}
-          <div className="space-y-6 md:col-span-2">
+          <div className="space-y-6">
             <h4 className="text-sm font-semibold uppercase tracking-wider">
               Navigation
             </h4>
 
             <nav className="flex flex-col gap-3 text-sm">
               {navigation.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`transition hover:text-black dark:hover:text-foreground ${
-                    pathname === item.href
-                      ? "text-black dark:text-foreground font-medium"
-                      : "text-gray-600 dark:text-muted-foreground"
-                  }`}
-                >
+                <Link key={item.href} href={item.href} className={linkClasses(item.href)}>
                   {item.name}
                 </Link>
               ))}
             </nav>
           </div>
 
-          {/* COMPANY */}
-          <div className="space-y-6 md:col-span-3">
+          {/* IMPORTANT LINKS */}
+          <div className="space-y-6">
             <h4 className="text-sm font-semibold uppercase tracking-wider">
-              IMPORTANT LINKS
+              Important Links
             </h4>
 
             <nav className="flex flex-col gap-3 text-sm">
               {companyLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-gray-600 dark:text-muted-foreground hover:text-black dark:hover:text-foreground transition"
-                >
+                <Link key={item.href} href={item.href} className={linkClasses(item.href)}>
                   {item.name}
                 </Link>
               ))}
@@ -150,7 +147,7 @@ export default function Footer() {
           </div>
 
           {/* NEWSLETTER */}
-          <div className="space-y-6 md:col-span-3">
+          <div className="space-y-6">
             <h4 className="text-sm font-semibold uppercase tracking-wider">
               Stay Updated
             </h4>
@@ -183,6 +180,7 @@ export default function Footer() {
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="origin-left mt-16 h-[1px] bg-gradient-to-r from-primary to-pink-500"
         />
@@ -190,10 +188,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600 dark:text-muted-foreground">
           <p>© {new Date().getFullYear()} ASCLICK. All rights reserved.</p>
-
-          <p className="text-xs opacity-70">
-            Designed with precision & passion.
-          </p>
+          <p className="text-xs opacity-70">Designed with precision & passion.</p>
         </div>
 
       </div>
