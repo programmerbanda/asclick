@@ -118,7 +118,7 @@ export default function Footer() {
 
           {/* NAVIGATION */}
           <div className="space-y-6">
-            <h4 className="text-sm font-semibold uppercase tracking-wider">
+            <h4 className="text-sm text-black dark:text-white font-semibold uppercase tracking-wider">
               Navigation
             </h4>
 
@@ -133,7 +133,7 @@ export default function Footer() {
 
           {/* IMPORTANT LINKS */}
           <div className="space-y-6">
-            <h4 className="text-sm font-semibold uppercase tracking-wider">
+            <h4 className="text-sm text-black dark:text-white font-semibold uppercase tracking-wider">
               Important Links
             </h4>
 
@@ -164,11 +164,11 @@ export default function Footer() {
                 type="email"
                 required
                 placeholder="Your email"
-                className="flex-1 px-4 py-3 bg-transparent outline-none text-sm"
+                className="flex-1 px-4 py-3 bg-transparent text-black dark:text-foreground outline-none text-sm"
               />
               <button
                 type="submit"
-                className="px-4 py-3 hover:bg-gray-100 dark:hover:bg-muted transition"
+                className="px-4 py-3 hover:bg-gray-100 text-black dark:text-white dark:hover:bg-muted transition"
               >
                 <ArrowRight className="w-4 h-4" />
               </button>
