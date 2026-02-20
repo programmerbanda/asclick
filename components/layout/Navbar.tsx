@@ -32,6 +32,9 @@ export default function Navbar() {
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+      if (window.innerWidth >= 768) {
+        setOpen(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -109,7 +112,7 @@ export default function Navbar() {
 
         {/* Mobile */}
         <div className="md:hidden flex items-center gap-2">
-          <Button 
+          <Button
             className="cursor-pointer text-foreground"
             variant="ghost"
             size="icon"
@@ -127,7 +130,11 @@ export default function Navbar() {
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button className="cursor-pointer text-foreground" variant="ghost" size="icon">
+              <Button
+                className="cursor-pointer text-foreground"
+                variant="ghost"
+                size="icon"
+              >
                 <Menu size={20} />
               </Button>
             </SheetTrigger>
