@@ -29,12 +29,12 @@ export default function Navbar() {
 
   useEffect(() => {
     setMounted(true);
+    if (window.innerWidth >= 768) {
+      setOpen(false);
+    }
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-      if (window.innerWidth >= 768) {
-        setOpen(false);
-      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -42,8 +42,8 @@ export default function Navbar() {
   }, []);
 
   if (window.innerWidth >= 768) {
-        setOpen(false);
-      }
+    setOpen(false);
+  }
 
   if (!mounted) return null;
 
