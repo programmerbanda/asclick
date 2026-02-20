@@ -41,6 +41,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  if (window.innerWidth >= 768) {
+        setOpen(false);
+      }
+
   if (!mounted) return null;
 
   const linkClasses = (href: string) =>
