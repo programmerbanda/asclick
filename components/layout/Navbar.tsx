@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
-  {name: "Home", href: "/" },
+  { name: "Home", href: "/" },
   // {name : "Contact", href: "/contact" },
   { name: "Work", href: "/work" },
   { name: "Services", href: "/services" },
@@ -57,9 +57,11 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        
         {/* Logo */}
-        <Link href="/" className="hover:opacity-80 transition">
+        <Link
+          href="/"
+          className="hover:opacity-80 text-black dark:text-white transition"
+        >
           <h2 className="text-2xl font-bold">
             AS
             <span className="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
@@ -71,14 +73,18 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className={linkClasses(link.href)}>
+            <Link
+              key={link.href}
+              href={link.href}
+              className={linkClasses(link.href)}
+            >
               {link.name}
             </Link>
           ))}
 
           {/* CTA */}
           <Link href="/contact">
-            <Button className="ml-4 bg-primary text-black dark:text-white hover:bg-primary/90 rounded-full px-6">
+            <Button className="ml-4 bg-black dark:bg-white cursur-pointer text-white dark:text-black hover:bg-primary/90 rounded-full px-6">
               Hire Me
             </Button>
           </Link>
@@ -87,7 +93,7 @@ export default function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="ml-2"
+            className="cursor-pointer text-foreground"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             <motion.div
@@ -103,23 +109,31 @@ export default function Navbar() {
 
         {/* Mobile */}
         <div className="md:hidden flex items-center gap-2">
-          <Button
+          <Button 
+            className="cursor-pointer"
             variant="ghost"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
-            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            <motion.div
+              key={theme}
+              initial={{ rotate: -180, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              transition={{ duration: 0.4 }}
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </motion.div>
           </Button>
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button className="cursor-pointer" variant="ghost" size="icon">
                 <Menu size={20} />
               </Button>
             </SheetTrigger>
 
             <SheetContent side="right" className="w-[260px]">
-              <div className="flex flex-col gap-6 mt-12 text-base font-medium">
+              <div className="flex flex-col gap-6 mt-12 text-base font-medium px-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -136,7 +150,7 @@ export default function Navbar() {
                 ))}
 
                 <Link href="/contact" onClick={() => setOpen(false)}>
-                  <Button className="w-full mt-4 bg-primary text-white rounded-full">
+                  <Button className="w-full mt-4 cursor-pointer bg-black dark:bg-white text-white dark:text-black rounded-full">
                     Book Now
                   </Button>
                 </Link>
