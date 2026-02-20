@@ -84,7 +84,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <Link href="/contact">
-            <Button className="ml-4 bg-black dark:bg-white cursur-pointer text-white dark:text-black hover:bg-primary/90 rounded-full px-6">
+            <Button className="ml-4 bg-black dark:bg-white cursor-pointer text-white dark:text-black hover:bg-primary/90 rounded-full px-6">
               Hire Me
             </Button>
           </Link>
@@ -110,7 +110,7 @@ export default function Navbar() {
         {/* Mobile */}
         <div className="md:hidden flex items-center gap-2">
           <Button 
-            className="cursor-pointer"
+            className="cursor-pointer text-foreground"
             variant="ghost"
             size="icon"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -127,7 +127,7 @@ export default function Navbar() {
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button className="cursor-pointer" variant="ghost" size="icon">
+              <Button className="cursor-pointer text-foreground" variant="ghost" size="icon">
                 <Menu size={20} />
               </Button>
             </SheetTrigger>
