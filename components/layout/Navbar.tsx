@@ -29,9 +29,6 @@ export default function Navbar() {
 
   useEffect(() => {
     setMounted(true);
-    if (window.innerWidth >= 768) {
-      setOpen(false);
-    }
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
