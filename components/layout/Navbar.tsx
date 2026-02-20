@@ -12,7 +12,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  // {name : "Contact", href: "/contact" },
   { name: "Work", href: "/work" },
   { name: "Services", href: "/services" },
   { name: "Testimonials", href: "/testimonials" },
@@ -34,8 +33,20 @@ export default function Navbar() {
       setScrolled(window.scrollY > 20);
     };
 
+    // ✅ FIX: Close mobile menu when screen ≥ 768px
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   if (!mounted) return null;
@@ -82,14 +93,12 @@ export default function Navbar() {
             </Link>
           ))}
 
-          {/* CTA */}
           <Link href="/contact">
             <Button className="ml-4 bg-black dark:bg-white cursor-pointer text-white dark:text-black hover:bg-primary/90 rounded-full px-6">
               Hire Me
             </Button>
           </Link>
 
-          {/* Theme Toggle */}
           <Button
             variant="ghost"
             size="icon"
