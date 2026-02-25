@@ -146,7 +146,7 @@ export default function Navbar() {
             </SheetTrigger>
 
             <SheetContent side="right" className="w-[260px]">
-              <div className="flex flex-col gap-6 mt-12 text-base font-medium px-4">
+              <div className="flex flex-col gap-6 mt-12 text-base font-medium px-4 text-center">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
