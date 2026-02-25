@@ -14,7 +14,7 @@ const portfolioItems = [
 
 export default function PortfolioClient() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-24">
+    <section className="max-w-7xl bg-white` dark:bg-[#0f0f12] dark:text-gray-100 transition-colors duration-300 container mx-auto px-6 py-24">
       
       {/* Heading */}
       <div className="text-center mb-20">
