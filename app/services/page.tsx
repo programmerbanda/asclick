@@ -67,7 +67,7 @@ export default function ServicesPage() {
                 {service.title}
               </h2>
 
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-gray-600 text-sm dark:text-gray-400 leading-relaxed">
                 {service.desc}
               </p>
             </div>
